@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="619.0" maxWidth="741.0" prefHeight="619.0" prefWidth="741.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VehiculeController">
+   <children>
+      <JFXTextField fx:id="matTfd" layoutX="114.0" layoutY="35.0" prefHeight="25.0" prefWidth="218.0" promptText="Matricule" />
+      <JFXTextField fx:id="marqueTfd" layoutX="395.0" layoutY="35.0" prefHeight="26.0" prefWidth="238.0" promptText="Marque" />
+      <JFXTextField fx:id="modeleTfd" layoutX="115.0" layoutY="81.0" prefHeight="25.0" prefWidth="218.0" promptText="Modele" />
+      <JFXTextField fx:id="couleurTfd" layoutX="395.0" layoutY="81.0" prefHeight="26.0" prefWidth="238.0" promptText="Couleur" />
+      <JFXTextField fx:id="prixTfd" layoutX="111.0" layoutY="137.0" prefHeight="26.0" prefWidth="522.0" promptText="Prix du jour" />
+      <JFXButton fx:id="ajouter" layoutX="255.0" layoutY="194.0" onAction="#vehiculeHandler" prefHeight="25.0" prefWidth="113.0" style="-fx-background-color: #409cb8;" text="Ajouter" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="nouveau" layoutX="111.0" layoutY="194.0" onAction="#nouveauVehicule" prefHeight="25.0" prefWidth="113.0" style="-fx-background-color: #33c457;" text="Nouveau" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="modifier" layoutX="395.0" layoutY="194.0" onAction="#modifierVehicule" prefHeight="25.0" prefWidth="113.0" style="-fx-background-color: #3727e7;" text="Modifier" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="supprimer" layoutX="530.0" layoutY="194.0" onAction="#supprimerVehicule" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #d62323;" text="Supprimer" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></JFXButton>
+      <TableView fx:id="table" layoutY="236.0" onMouseClicked="#displayVihicule" prefHeight="400.0" prefWidth="741.0">
+         <columns>
+            <TableColumn fx:id="cmatricule" prefWidth="94.0" text="Matricule" />
+            <TableColumn fx:id="cmarque" prefWidth="98.0" text="Marque" />
+            <TableColumn fx:id="cmodele" prefWidth="145.0" text="Model" />
+            <TableColumn fx:id="ccouleur" prefWidth="119.0" text="Couleur" />
+            <TableColumn fx:id="cprix" prefWidth="75.0" text="Prix" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <JFXButton layoutX="14.0" layoutY="20.0" onAction="#retour" prefHeight="44.0" prefWidth="57.0" text=" ">
+         <graphic>
+            <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../r.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

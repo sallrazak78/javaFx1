@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="254.0" prefWidth="438.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserController">
+   <children>
+      <JFXTextField fx:id="loginTfd" layoutX="69.0" layoutY="74.0" prefHeight="25.0" prefWidth="300.0" promptText="Login" unFocusColor="BLACK" />
+      <JFXPasswordField fx:id="pwdPfd" layoutX="69.0" layoutY="127.0" prefHeight="25.0" prefWidth="300.0" promptText="Password" unFocusColor="BLACK" />
+      <JFXButton fx:id="connexionBtn" layoutX="69.0" layoutY="187.0" onAction="#connexionHandler" prefHeight="25.0" prefWidth="300.0" style="-fx-background-color: #4059a9;" text="Connexion" textFill="WHITE">
+         <font>
+            <Font name="Droid Serif" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

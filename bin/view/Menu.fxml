@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="528.0" prefWidth="663.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuController">
+   <children>
+      <JFXButton onAction="#ouvreClient" prefHeight="184.0" prefWidth="692.0" style="-fx-background-color: #FFF;" text=" ">
+         <graphic>
+            <ImageView fitHeight="170.0" fitWidth="197.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../client.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton layoutY="368.0" onAction="#ouvreVoiture" prefHeight="184.0" prefWidth="692.0" style="-fx-background-color: #FFFFEB;" text=" ">
+         <graphic>
+            <ImageView fitHeight="176.0" fitWidth="274.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../voiture.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton layoutY="184.0" onAction="#ouvreLocation" prefHeight="184.0" prefWidth="692.0" style="-fx-background-color: #FFFFAA;" text=" ">
+         <graphic>
+            <ImageView fitHeight="188.0" fitWidth="344.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../location.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

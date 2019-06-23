@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="743.0" prefWidth="948.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LocationController">
+   <children>
+      <JFXTextField fx:id="piece" layoutX="43.0" layoutY="64.0" prefHeight="26.0" prefWidth="246.0" promptText="Nemero de piece" />
+      <JFXTextField fx:id="nom" layoutX="43.0" layoutY="102.0" prefHeight="26.0" prefWidth="246.0" promptText="Nom" />
+      <JFXTextField fx:id="prenom" layoutX="43.0" layoutY="140.0" prefHeight="26.0" prefWidth="246.0" promptText="Prenom" />
+      <JFXDatePicker fx:id="date" layoutX="43.0" layoutY="180.0" prefHeight="19.0" prefWidth="246.0" promptText="Date de naissance" />
+      <JFXTextField fx:id="email" layoutX="43.0" layoutY="221.0" prefHeight="26.0" prefWidth="246.0" promptText="Email" />
+      <JFXTextField fx:id="adresse" layoutX="43.0" layoutY="259.0" prefHeight="26.0" prefWidth="246.0" promptText="Adresse" />
+      <JFXTextField fx:id="matricule" layoutX="353.0" layoutY="63.0" prefHeight="28.0" prefWidth="246.0" promptText="Matricule" />
+      <JFXTextField fx:id="marque" layoutX="353.0" layoutY="114.0" prefHeight="28.0" prefWidth="246.0" promptText="Marque" />
+      <JFXTextField fx:id="modele" layoutX="350.0" layoutY="166.0" prefHeight="28.0" prefWidth="246.0" promptText="Modele" />
+      <JFXTextField fx:id="prix" layoutX="350.0" layoutY="259.0" prefHeight="26.0" prefWidth="246.0" promptText="Prix" />
+      <JFXDatePicker fx:id="dateLoc" layoutX="667.0" layoutY="63.0" prefHeight="19.0" prefWidth="246.0" promptText="Date de location" />
+      <JFXComboBox fx:id="jours" layoutX="669.0" layoutY="103.0" onAction="#calcul" prefHeight="26.0" prefWidth="246.0" promptText="Nombre de jours" />
+      <JFXTextField fx:id="montant" layoutX="667.0" layoutY="140.0" prefHeight="26.0" prefWidth="246.0" promptText="Montant" />
+      <JFXTextArea fx:id="commentaire" layoutX="667.0" layoutY="187.0" prefHeight="95.0" prefWidth="246.0" promptText="commenter" />
+      <JFXButton fx:id="enregistrer" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="37.0" layoutY="312.0" onAction="#enregistrerLocation" prefHeight="68.0" prefWidth="878.0" style="-fx-background-color: #FF9733;" text="ENREGISTRER" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="couleur" layoutX="350.0" layoutY="220.0" prefHeight="28.0" prefWidth="246.0" promptText="Couleur" />
+      <Line endX="1.20001220703125" endY="173.20001220703125" layoutX="322.0" layoutY="114.0" startX="1.20001220703125" startY="-35.600006103515625" />
+      <Line endX="1.20001220703125" endY="173.20001220703125" layoutX="632.0" layoutY="111.0" startX="1.20001220703125" startY="-35.600006103515625" />
+      <Label layoutX="133.0" layoutY="25.0" prefHeight="28.0" prefWidth="66.0" style="-fx-font-weight: bold;" text="Client">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="422.0" layoutY="25.0" prefHeight="28.0" prefWidth="86.0" style="-fx-font-weight: bold;" text="Vehicule">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="725.0" layoutY="25.0" prefHeight="28.0" prefWidth="86.0" style="-fx-font-weight: bold;" text="Location">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="1.0" layoutY="-3.0" onAction="#retour" prefHeight="44.0" prefWidth="57.0" text=" ">
+         <graphic>
+            <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../r.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <TableView fx:id="table" layoutY="431.0" prefHeight="312.0" prefWidth="948.0">
+        <columns>
+          <TableColumn fx:id="cDate" prefWidth="123.20001220703125" text="Date" />
+          <TableColumn fx:id="cJours" prefWidth="88.0" text="Nb jours" />
+            <TableColumn fx:id="cCommentaire" prefWidth="128.79998779296875" text="Commentaire" />
+            <TableColumn fx:id="cNom" prefWidth="126.4000244140625" text="Nom" />
+            <TableColumn fx:id="cMatricule" prefWidth="121.5999755859375" text="Matricule" />
+            <TableColumn fx:id="cPrix" prefWidth="181.5999755859375" text="Prix" />
+            <TableColumn fx:id="cMontant" prefWidth="175.99993896484375" text="Montant" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

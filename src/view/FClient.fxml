@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="300.0" minWidth="300.0" prefHeight="695.0" prefWidth="917.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientController">
+   <children>
+      <JFXTextField fx:id="piece" layoutX="50.0" layoutY="47.0" prefHeight="26.0" prefWidth="352.0" promptText="Numero de piece" />
+      <JFXTextField fx:id="nom" layoutX="505.0" layoutY="107.0" prefHeight="26.0" prefWidth="352.0" promptText="Nom" />
+      <JFXTextField fx:id="prenom" layoutX="50.0" layoutY="107.0" prefHeight="26.0" prefWidth="352.0" promptText="Prenom" />
+      <JFXDatePicker fx:id="date" layoutX="505.0" layoutY="46.0" prefHeight="28.0" prefWidth="352.0" promptText="Date de naissance" />
+      <JFXTextField fx:id="email" layoutX="50.0" layoutY="178.0" prefHeight="26.0" prefWidth="352.0" promptText="Email" />
+      <JFXTextField fx:id="adresse" layoutX="505.0" layoutY="178.0" prefHeight="26.0" prefWidth="352.0" promptText="Adresse" />
+      <JFXButton fx:id="nouveau" layoutX="50.0" layoutY="240.0" onAction="#nouveauClient" prefHeight="26.0" prefWidth="179.0" style="-fx-background-color: #FF5733;" text="Nouveau client " />
+      <TableView fx:id="table" layoutX="6.0" layoutY="292.0" onMouseClicked="#dataHandler" prefHeight="402.0" prefWidth="911.0">
+        <columns>
+          <TableColumn fx:id="cpiece" prefWidth="80.79998922348022" text="n° Identite" />
+          <TableColumn fx:id="cdate" prefWidth="114.39995574951172" text="Date de naissance" />
+            <TableColumn fx:id="cprenom" prefWidth="175.19998168945312" text="Prenom" />
+            <TableColumn fx:id="cnom" prefWidth="127.20001220703125" text="Nom" />
+            <TableColumn fx:id="cemail" prefWidth="201.60000610351562" text="Email" />
+            <TableColumn fx:id="cadresse" prefWidth="219.20001220703125" text="Adresse" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="ajouter" layoutX="254.0" layoutY="237.0" onAction="#ajouterClient" prefHeight="26.0" prefWidth="179.0" style="-fx-background-color: #FF9733;" text="Ajouter " />
+      <JFXButton fx:id="modifier" layoutX="475.0" layoutY="237.0" onAction="#modifierClient" prefHeight="26.0" prefWidth="179.0" style="-fx-background-color: #FF9993;" text="Modifier " />
+      <JFXButton fx:id="supprimer" layoutX="681.0" layoutY="237.0" onAction="#supprimerClient" prefHeight="26.0" prefWidth="179.0" style="-fx-background-color: #F0A88A;" text="Supprimer">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </JFXButton>
+      <JFXButton layoutX="-8.0" layoutY="-9.0" onAction="#retour" prefHeight="44.0" prefWidth="57.0" text=" ">
+         <graphic>
+            <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../r.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>
